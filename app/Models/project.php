@@ -9,13 +9,13 @@ use Illuminate\Support\Str;
 class project extends Model
 {
     use HasFactory;
-    protected $fillable =['user_id','slug','name','description','language','image'];
+    protected $fillable =['user_id','slug','name','description','language','image','type_id'];
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function category()
+    public function type()
     {
         return $this->belongsTo(Type::class);
     }

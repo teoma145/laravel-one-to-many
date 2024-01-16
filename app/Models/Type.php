@@ -10,7 +10,7 @@ class Type extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function posts()
+    public function projects()
     {
         return $this->hasMany(Project::class);
     }

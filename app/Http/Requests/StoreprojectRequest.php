@@ -25,7 +25,8 @@ class StoreprojectRequest extends FormRequest
             'name'=>['required','min:3','max:200','unique:projects'],
             'description'=>['nullable'],
             'language'=>['nullable'],
-            'image'=>['nullable','image']
+            'image'=>['nullable','image'],
+            'type_id'=>'required|exists:types,id'
         ];
     }
     public function messages(){

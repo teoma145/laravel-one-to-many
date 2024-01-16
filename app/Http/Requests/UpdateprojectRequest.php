@@ -24,7 +24,8 @@ class UpdateprojectRequest extends FormRequest
         return [
             'name'=>['required','min:3','max:200',Rule::unique('projects')->ignore($this->project)],
             'description'=>['nullable'],
-            'language'=>['nullable']
+            'language'=>['nullable'],
+            'type_id'=>'required|exists:types,id'
         ];
     }
     public function messages(){
