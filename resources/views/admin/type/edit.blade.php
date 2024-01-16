@@ -6,7 +6,7 @@
 
     <h1>{{$project->name}}</h1>
 
-    <form action="{{ route('admin.projects.update', $project->slug)}}"  method="POST">
+    <form action="{{ route('admin.projects.update', $project->id)}}"  method="POST">
 
     @csrf
 

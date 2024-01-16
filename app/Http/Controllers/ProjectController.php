@@ -46,7 +46,7 @@ class ProjectController extends Controller
 
         }
         $newProject = Project::create($formData);
-        return to_route('admin.projects.show',$newProject->id);
+        return to_route('admin.projects.show',$newProject->slug);
 
     }
 
@@ -74,7 +74,7 @@ class ProjectController extends Controller
         $formData = $request->validated();
         $project->fill($formData);
         $project->update();
-        return to_route('admin.projects.show', $project->id);
+        return to_route('admin.projects.show', $project->slug);
     }
 
     /**
